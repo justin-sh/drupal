@@ -1,0 +1,59 @@
+hello:
+  path: 'hello'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloController::sayhello'
+    _title: 'Hello!'
+  requirements:
+    _permission: 'access content'
+
+welcome:
+  path: 'welcome'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloController::welcome'
+    _title: 'Welcome'
+  requirements:
+    _permission: 'access content'
+
+hello.form:
+  path: 'hello/form'
+  defaults:
+    _form: '\Drupal\hello\Form\HelloForm'
+    _title: 'Hello Form'
+  requirements:
+    _permission: 'access content'
+
+hello.modal:
+  path: 'hello/modal'
+  defaults:
+    _form: '\Drupal\hello\Form\HelloModalForm'
+    _title: 'Hello Modal'
+  requirements:
+    _access: 'TRUE'
+
+hello.create:
+  path: 'hello/create-node'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloController::create_node'
+  requirements:
+    _access: 'TRUE'
+
+hello.file:
+  path: 'hello/create-file'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloController::create_file'
+  requirements:
+    _access: 'TRUE'
+
+hello.term:
+  path: 'hello/add-term-for-tag'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloController::add_taxonomy_term'
+  requirements:
+    _access: 'TRUE'
+
+hello.menu:
+  path: 'hello/create-menu'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloController::create_menu_link'
+  requirements:
+    _access: 'TRUE'

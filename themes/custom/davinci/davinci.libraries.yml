@@ -1,0 +1,22 @@
+#• Base: CSS reset/normalize plus HTML element styling
+#• Layout: Macro arrangement of a web page, including any grid systems
+#• Component: Discrete, reusable UI elements
+#• State: Styles that deal with client-side changes to components
+#• Theme: Purely visual styling (“look-and-feel”) for a component
+
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/theme/styles.css: {}
+
+node-styling:
+  version: 1.x
+  css:
+    theme:
+      css/theme/node.css: {}
+
+annoying-cow:
+  version: 1.x
+  js:
+    js/annoying-cow.js: {}

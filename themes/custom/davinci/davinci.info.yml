@@ -2,6 +2,9 @@ name: Davinci
 type: theme
 description: A Drupal 8 theme
 core: 8.x
+libraries:
+  - davinci/global-styling
+  - davinci/annoying-cow
 regions:
   messages: 'Messages'
   header_first: 'Header first'

@@ -1,0 +1,24 @@
+davinci.mobile:
+  label: mobile
+  mediaQuery: 'all and (max-width: 559px)'
+  weight: 0
+  multipliers:
+    - 1x
+davinci.mobile_retina:
+  label: mobile_retina
+  mediaQuery: 'all and (max-width: 559px)'
+  weight: 0
+  multipliers:
+    - 2x
+davinci.narrow:
+  label: narrow
+  mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
+  weight: 1
+  multipliers:
+    - 1x
+davinci.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 851px)'
+  weight: 2
+  multipliers:
+  - 1x

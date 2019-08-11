@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+// add custom theme settings
+function davinci_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['site_slogan'] = [
+    '#type' => 'textfield',
+    '#title' => t('Site Slogan'),
+    '#default_value' => theme_get_setting('site_slogan'),
+    '#description' => t("Enter the site's slogan"),
+  ];
+}
+
+function davinci_preprocess_page(&$variables) {
+//  \Drupal::logger("eshv2")->info(json_encode());
+  $variables['site_slogan'] = theme_get_setting('site_slogan');
+}

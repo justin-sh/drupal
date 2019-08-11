@@ -1,3 +1,3 @@
 (function ($, Drupal) {
-    alert("Moo!")
+    console.info("Moo!");
 })(jQuery, Drupal);

@@ -54,70 +54,71 @@
  */
 #}
 <div class="layout-container">
-  <header role="banner">
-    <div class="header_first">
-        {{ page.header_first }}
+    {{ site_slogan }}
+    <header role="banner">
+        <div class="header_first">
+            {{ page.header_first }}
+        </div>
+        <div class="header_second">
+            {{ page.header_second }}
+        </div>
+        <div class="header_third">
+            {{ page.header_third }}
+        </div>
+    </header>
+    <div class="navbar">
+        {{ page.navbar }}
     </div>
-    <div class="header_second">
-        {{ page.header_second }}
-    </div>
-    <div class="header_third">
-        {{ page.header_third }}
-    </div>
-  </header>
-  <div class="navbar">
-      {{ page.navbar }}
-  </div>
     {{ page.breadcrumb }}
     {{ page.help }}
-  <div class="features">
-    <div class="features_first">
-        {{ page.features_first }}
+    <div class="features">
+        <div class="features_first">
+            {{ page.features_first }}
+        </div>
+        <div class="features_second">
+            {{ page.features_second }}
+        </div>
+        <div class="features_third">
+            {{ page.features_third }}
+        </div>
     </div>
-    <div class="features_second">
-        {{ page.features_second }}
-    </div>
-    <div class="features_third">
-        {{ page.features_third }}
-    </div>
-  </div>
     {{ page.highlighted }}
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-    <div class="layout-content">
-        {{ page.content }}
-    </div>{# /.layout-content #}
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-            {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-            {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-  </main>
-  <div class="tertiary">
-      {% if page.tertiary_first %}
-        <div class="tertiary_first">
-            {{ page.tertiary_first }}
-        </div>
-      {% endif %}
-      {% if page.tertiary_second %}
-        <div class="tertiary_second">
-            {{ page.tertiary_second }}
-        </div>
-      {% endif %}
-      {% if page.tertiary_third %}
-        <div class="tertiary_third">
-            {{ page.tertiary_third }}
-        </div>
-      {% endif %}
-  </div>
+    <main role="main">
+        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+        <div class="layout-content">
+            {{ page.content }}
+        </div>{# /.layout-content #}
+        {% if page.sidebar_first %}
+            <aside class="layout-sidebar-first" role="complementary">
+                {{ page.sidebar_first }}
+            </aside>
+        {% endif %}
+        {% if page.sidebar_second %}
+            <aside class="layout-sidebar-second" role="complementary">
+                {{ page.sidebar_second }}
+            </aside>
+        {% endif %}
+    </main>
+    <div class="tertiary">
+        {% if page.tertiary_first %}
+            <div class="tertiary_first">
+                {{ page.tertiary_first }}
+            </div>
+        {% endif %}
+        {% if page.tertiary_second %}
+            <div class="tertiary_second">
+                {{ page.tertiary_second }}
+            </div>
+        {% endif %}
+        {% if page.tertiary_third %}
+            <div class="tertiary_third">
+                {{ page.tertiary_third }}
+            </div>
+        {% endif %}
+    </div>
     {% if page.footer %}
-      <footer role="contentinfo">
-          {{ page.footer }}
-      </footer>
+        <footer role="contentinfo">
+            {{ page.footer }}
+        </footer>
     {% endif %}
 </div>{# /.layout-container #}

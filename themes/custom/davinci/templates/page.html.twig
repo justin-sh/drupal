@@ -28,16 +28,24 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - page.header: Items for the header region.
- * - page.primary_menu: Items for the primary menu region.
- * - page.secondary_menu: Items for the secondary menu region.
- * - page.highlighted: Items for the highlighted content region.
- * - page.help: Dynamic help text, mostly for admin pages.
+ * - page.message: The messages area.
+ * - page.header_first: First header region.
+ * - page.header_second: Second header region.
+ * - page.header_third: Third header region.
+ * - page.help: Help region
+ * - page.features_first: First featured region.
+ * - page.features_second: Second featured region.
+ * - page.features_third: Third featured region.
+ * - page.features_fourth: Fourth featured region.
+ * - page.highlighted: Highlighted region.
  * - page.content: The main content of the current page.
  * - page.sidebar_first: Items for the first sidebar.
  * - page.sidebar_second: Items for the second sidebar.
+ * - page.tertiary_first: First tertiary region.
+ * - page.tertiary_second: Second tertiary region.
+ * - page.tertiary_third: Third tertiary region.
+ * - page.tertiary_fourth: Fourth tertiary region.
  * - page.footer: Items for the footer region.
- * - page.breadcrumb: Items for the breadcrumb region.
  *
  * @see template_preprocess_page()
  * @see html.html.twig
@@ -46,45 +54,70 @@
  */
 #}
 <div class="layout-container">
-
   <header role="banner">
-    {{ page.header }}
+    <div class="header_first">
+        {{ page.header_first }}
+    </div>
+    <div class="header_second">
+        {{ page.header_second }}
+    </div>
+    <div class="header_third">
+        {{ page.header_third }}
+    </div>
   </header>
-
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
+  <div class="navbar">
+      {{ page.navbar }}
+  </div>
+    {{ page.breadcrumb }}
+    {{ page.help }}
+  <div class="features">
+    <div class="features_first">
+        {{ page.features_first }}
+    </div>
+    <div class="features_second">
+        {{ page.features_second }}
+    </div>
+    <div class="features_third">
+        {{ page.features_third }}
+    </div>
+  </div>
+    {{ page.highlighted }}
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
     <div class="layout-content">
-      {{ page.content }}
+        {{ page.content }}
     </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
+      {% if page.sidebar_first %}
+        <aside class="layout-sidebar-first" role="complementary">
+            {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
+      {% if page.sidebar_second %}
+        <aside class="layout-sidebar-second" role="complementary">
+            {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
   </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
+  <div class="tertiary">
+      {% if page.tertiary_first %}
+        <div class="tertiary_first">
+            {{ page.tertiary_first }}
+        </div>
+      {% endif %}
+      {% if page.tertiary_second %}
+        <div class="tertiary_second">
+            {{ page.tertiary_second }}
+        </div>
+      {% endif %}
+      {% if page.tertiary_third %}
+        <div class="tertiary_third">
+            {{ page.tertiary_third }}
+        </div>
+      {% endif %}
+  </div>
+    {% if page.footer %}
+      <footer role="contentinfo">
+          {{ page.footer }}
+      </footer>
+    {% endif %}
 </div>{# /.layout-container #}

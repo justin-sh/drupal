@@ -54,6 +54,12 @@
     {% else %}
         {% for item in items %}
             <div{{ attributes }}>{{ item.content }}</div>
+            <div>
+                Entity type: {{ entity_type }}
+            </div>
+            <div>
+                Field type: {{ field_type }}
+            </div>
         {% endfor %}
     {% endif %}
 {% else %}
@@ -68,5 +74,11 @@
             {% if multiple %}
         </div>
         {% endif %}
+        <div>
+            Entity type: {{ entity_type }}
+        </div>
+        <div>
+            Field type: {{ field_type }}
+        </div>
     </div>
 {% endif %}

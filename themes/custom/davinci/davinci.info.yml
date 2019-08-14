@@ -2,6 +2,7 @@ name: Davinci
 type: theme
 description: A Drupal 8 theme
 core: 8.x
+base theme: classy
 libraries:
   - davinci/global-styling
   - davinci/annoying-cow
